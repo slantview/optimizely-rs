@@ -16,9 +16,9 @@ pub struct TreeParameters<T> {
     pub audience_map: HashMap<String, Audience<T>>,
 }
 
-impl TreeParameters<T> {
+impl<T> TreeParameters<T> {
     /// new returns TreeParameters object
-    fn new<T>(user: Option<UserContext>, audience_map: HashMap<String, Audience<T>>) -> Self {
+    fn new(user: Option<UserContext>, audience_map: HashMap<String, Audience<T>>) -> Self {
         Self {
             user,
             audience_map,

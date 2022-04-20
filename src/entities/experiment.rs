@@ -14,7 +14,7 @@ pub struct Variation {
 #[derive(Clone, Debug)]
 pub struct Experiment<T> {
     pub audience_ids: Vec<String>,
-    pub audience_conditions: T,
+    pub audience_conditions: Vec<T>,
     pub id: String,
     pub layer_id: String,
     pub key: String,

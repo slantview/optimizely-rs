@@ -24,7 +24,7 @@ impl UserContext {
     pub fn get_string_attribute(&self, attr_name: String) -> Option<String> {
         match self.attributes.get(&attr_name) {
             Some(attr) => match attr {
-                VariablePub::String(value) => Some(*value),
+                VariablePub::String(value) => Some(value.clone()),
                 _ => None,
             },
             None => None,
